@@ -1,0 +1,100 @@
+<!--file name : index.html-->
+<!--pwd : /IAFC_coffee/app/templates/main/index.html-->
+
+<!DOCTYPE html>
+<!-- saved from url=(0049)http://bootstrapk.com/examples/starter-template/# -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="http://bootstrapk.com/favicon.ico">
+
+    <title>ISIA_coffee</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/static/css/starter-template.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="http://203.237.143.107/test">ISIA Coffee Machine 관리자</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="http://203.237.143.107/test">Home</a></li>
+            <li><a href="http://203.237.143.107/test">About</a></li>
+            <li><a href="http://203.237.143.107/test">Contact</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+
+      <div class="starter-template">
+        <h1>ISIA Coffee machine 관리자 모드</h1>
+        <p class="lead">한이음 프로젝트<br>대전대학교 컴퓨터공학과 ISIA팀</p>
+      </div>
+
+    </div><!-- /.container -->
+
+    <div class="container" style="font-size:20px">
+        <input type="button" value="Insert & Data Count" onclick="location.href='/test/insert'">
+        <input type="button" value="CSV_Export" onclick="location.href='/test/export'">
+        <input type="button" value="CSV_Remove" onclick="location.href='/test/remove'">
+        <br><br>
+        <input type="button" value="Learning" onclick="location.href='/test/learning'">
+        <input type="button" value="Result" onclick="location.href='/test/result'">
+        <br><br>
+        <hr style="border: solid 1px black">
+        <p style="color:red">주의 : 데이터 삭제 시 현재까지 모인 사용자 데이터가 모두 삭제됩니다.</p>
+        <input type="button" value="Data_Remove" onclick="location.href='/test/dataremove'">
+        <hr style="border: solid 1px black">
+        <br>
+        <div>
+            CSV file exist check : {{check}}
+        </div>
+        <br>
+        <div>
+            Insert result : {{result}}
+            <br>
+            Data Count : {{countData}}
+        </div>
+        <br>
+        <div>
+            Class_1(아메리카노) 진하기 대표값 : {{class1}}
+            <br>
+            Class_1(에스프레소) 진하기 대표값 : {{class2}}
+        </div>
+        <br>
+        <div>
+            현재 아메리카노 진하기 : {{centroid_1}}
+            <br>
+            현재 에스프레소 진하기 : {{centroid_2}}
+        </div>
+    </div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+
+</body></html>
